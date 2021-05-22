@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+ 
+main {
+    padding: 20px;
+ }
+
+ article{
+    text-align: justify;
+ }
+ 
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+ 
+h2, h3 {
+   color: #4a503d
+}
+ 
+.image-jumbotron {
+   width: 100%;
+   max-height: 400px;
+   object-fit: cover;
+   object-position: center;
+}
+
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #334443
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+ }
+ nav a:hover {
+    font-weight: bold;
+ }
+
+ .profile header {
+    text-align: center;
+ }
+
+ footer {
+    padding: 20px;
+    color: white;
+    background-color: #334443;
+    text-align: center;
+    font-weight: bold;
+ }
+
+ .featured-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+ }
+
+ .profile img {
+    width: 200px;
+ }
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+ .jumbotron {
+    font-size: 30px;
+    padding: 10px;
+    background-color: #393e46;
+    text-align: center;
+    color: white;
+ }
+
+ nav li {
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+ }
+
+ nav {
+    background-color: #334443;
+    padding: 5px;
+ }
+
+ nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+ }
+ 
+ #content {
+   float: left;
+   width: 75%;
+}
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+* {
+   box-sizing: border-box;
+}
+@media screen and (max-width: 1000px) {
+   #content,
+   aside {
+       width: 100%;
+       padding: 0;
+   }
+}
+
+nav {
+   background-color: #334443;
+   padding: 5px;
+   position: sticky;
+   top: 0;
+}
+
+header {
+   display: inline;
+}
+
+.dropbtn {
+   background-color: #334443;
+   font-family: 'Roboto Slab', sans-serif;
+   color: white;
+   font-size: 18px;
+   border: none;
+   cursor: pointer;
+ }
+ .dropbtn:hover, .dropbtn:focus {
+   font-weight: bold;
+ }
+ 
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .dropdown-content {
+   display: none;
+   position: absolute;
+   background-color: #f1f1f1;
+   min-width: 300px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   z-index: 1;
+ }
+ 
+ .dropdown-content a {
+   color: black;
+   font-family: 'Roboto Slab', sans-serif;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+ }
+ 
+ .dropdown-content a:hover {background-color: #ddd}
+ 
+ .show {display:block;}
