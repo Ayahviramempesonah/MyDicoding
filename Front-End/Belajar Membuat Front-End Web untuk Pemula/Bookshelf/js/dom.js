@@ -37,12 +37,13 @@ function makeBook(id,BookTitle,BookAuthor,BookYear,BookIsComplete) {
 }
 
 function addBook() {
+    const Tgl = Date.now();
     const BookTitle = document.getElementById("inputBookTitle").value;
     const BookAuthor = document.getElementById("inputBookAuthor").value;
     const BookYear = document.getElementById("inputBookYear").value;
     const completedTODOList = document.getElementById(COMPLETED_BOOK);
     
-    const book = makeBook(+ newDate(),BookTitle,BookAuthor,BookYear);
+    const book = makeBook(Tgl,BookTitle,BookAuthor,BookYear);
     
     completedTODOList.append(book);
 
