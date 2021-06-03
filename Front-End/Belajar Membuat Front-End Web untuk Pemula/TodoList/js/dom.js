@@ -33,7 +33,7 @@ function makeTodo(data /* string */, timestamp /* string */, isCompleted /* bool
 
 function createUndoButton() {
     return createButton("undo-button", function(event){
-        undoTaskFromCompleted(event.target.parentElement);
+         (event.target.parentElement);
     });
 }
 

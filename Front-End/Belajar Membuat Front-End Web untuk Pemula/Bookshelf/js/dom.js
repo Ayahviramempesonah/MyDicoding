@@ -18,9 +18,8 @@ function makeBook(id,BookTitle,BookAuthor,BookYear,BookIsComplete) {
     textContainer.classList.add("book_item")
     textContainer.append(Title, Author,Year);
 
-    const container = document.createElement("div");
-    container.classList.add("book_list")
-    container.append(textContainer);
+    textContainer.append(createCheckButton());
+
     
     // if(isCompleted){
     //     container.append(
@@ -32,8 +31,8 @@ function makeBook(id,BookTitle,BookAuthor,BookYear,BookIsComplete) {
     //         createCheckButton()
     //     );
     // }
-
-    return container;
+    //console.log(Bookid);
+    return textContainer;
 }
 
 function addBook() {
@@ -46,6 +45,25 @@ function addBook() {
     const book = makeBook(Tgl,BookTitle,BookAuthor,BookYear);
     
     completedTODOList.append(book);
+    
+}
 
-    console.log(book);
+function createButton(buttonTypeClass /* string */, eventListener /* callback function */) {
+    const container = document.createElement("div");
+    container.classList.add("action")
+    const button = document.createElement("button");
+    button.classList.add(buttonTypeClass);
+    button.innerText ="Selesai Dibaca"
+    
+    button.addEventListener("click", function (event) {
+        eventListener(event);
+    });
+    container.append(button)
+    return container;
+}
+
+function createCheckButton() {
+    return createButton("green", function(event){
+        //addTaskToCompleted(event.target.parentElement);
+    });
 }
