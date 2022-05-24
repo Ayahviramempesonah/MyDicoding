@@ -1,6 +1,11 @@
 <resources>
     <!-- Other string resources-->
 
+    <string name="app_name">Github</string>
+
+    <string name="username">Username</string>
+    <string name="name">Nama</string>
+
     <string-array name="username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>
@@ -14,7 +19,7 @@
         <item>sidiqpermana</item>
     </string-array>
 
-    <string-array name="name">
+    <string-array name="name_github">
         <item>Jake Wharton</item>
         <item>Amit Shekhar</item>
         <item>Romain Guy</item>
