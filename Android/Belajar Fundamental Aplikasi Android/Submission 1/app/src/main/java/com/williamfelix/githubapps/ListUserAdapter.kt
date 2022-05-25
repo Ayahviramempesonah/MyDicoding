@@ -8,20 +8,18 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.williamfelix.githubapps.databinding.ItemRowDataBinding
 
 class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
 
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var imgPhoto: ImageView = itemView.findViewById(R.id.img_item_photo)
-        var tvName: TextView = itemView.findViewById(R.id.tv_item_name)
-        var tvDescription: TextView = itemView.findViewById(R.id.tv_item_username)
+    class ListViewHolder(var binding: ItemRowDataBinding) : RecyclerView.ViewHolder(binding.root) {
+
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        //val binding = ItemRowHeroBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_row_data, parent, false)
-        return ListViewHolder(view)
+    override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ListViewHolder {
+        val binding = ItemRowDataBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
+        return ListViewHolder(binding)
     }
 
     fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
@@ -30,14 +28,14 @@ class ListUserAdapter(private val listUser: ArrayList<User>): RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val (name, username, photo) = listUser[position]
-        holder.imgPhoto.setImageResource(photo)
+        holder.binding.imgItemPhoto.setImageResource(photo)
         Glide.with(holder.itemView.context)
             .load(photo)
             .centerCrop()
             .circleCrop()
-            .into(holder.imgPhoto)
-        holder.tvName.text = name
-        holder.tvDescription.text = username
+            .into(holder.binding.imgItemPhoto)
+        holder.binding.tvItemName.text = name
+        holder.binding.tvItemUsername.text = username
         holder.itemView.setOnClickListener {
             Toast.makeText(holder.itemView.context, "Kamu memilih " + listUser[holder.adapterPosition].name, Toast.LENGTH_SHORT).show()
         }
