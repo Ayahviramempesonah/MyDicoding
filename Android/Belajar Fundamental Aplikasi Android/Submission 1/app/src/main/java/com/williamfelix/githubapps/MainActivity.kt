@@ -40,10 +40,15 @@ class MainActivity : AppCompatActivity() {
         get() {
             val dataName = resources.getStringArray(R.array.name_github)
             val dataUsername = resources.getStringArray(R.array.username)
+            val location = resources.getStringArray(R.array.location)
+            val repository = resources.getStringArray(R.array.repository)
+            val company = resources.getStringArray(R.array.company)
+            val followers = resources.getStringArray(R.array.followers)
+            val following= resources.getStringArray(R.array.following)
             val dataPhoto = resources.obtainTypedArray(R.array.avatar)
             val listUser = ArrayList<User>()
             for (i in dataName.indices) {
-                val hero = User(dataName[i],dataUsername[i], dataPhoto.getResourceId(i, -1))
+                val hero = User(dataName[i],dataUsername[i], dataPhoto.getResourceId(i, -1), location[i], repository[i], company[i],followers[i], following[i])
                 listUser.add(hero)
             }
             return listUser

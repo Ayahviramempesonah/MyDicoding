@@ -6,6 +6,8 @@
     <string name="username">Username</string>
     <string name="name">Nama</string>
 
+    <string name="object_received">Object Diterima</string>
+
     <string-array name="username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>
