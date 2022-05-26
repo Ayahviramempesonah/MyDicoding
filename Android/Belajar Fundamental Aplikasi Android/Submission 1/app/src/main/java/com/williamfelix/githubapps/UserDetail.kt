@@ -28,8 +28,8 @@ class UserDetail : AppCompatActivity() {
             .into(binding.imagesGithub)
         binding.nameGithub.text = user.name
         binding.usernameGithub.text = user.username
-        binding.follower.text = user.followers
-        binding.following.text = user.following
+        binding.follower.text =  "${user.followers} Follower"
+        binding.following.text =  "${user.following} Following"
         binding.repo.text = "${user.repository} Repository"
         binding.company.text = "Company : ${user.company} Repository"
         binding.location.text = "Location : ${user.location}"
